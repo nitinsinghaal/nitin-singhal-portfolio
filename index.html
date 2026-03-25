@@ -1144,6 +1144,40 @@ function tick(){
   if(e)e.textContent=`${h}:${m}:${s}`;
 }
 setInterval(tick,1000);tick();
+  
+  /* ── E mail ───────────────────────────── */
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+</script>
+<!-- Deploy -->
+  <script>
+function deployMsg() {
+
+  const name = document.getElementById("cf-name").value;
+  const email = document.getElementById("cf-email").value;
+  const message = document.getElementById("cf-msg").value;
+
+  emailjs.send("service_s661gmz", "template_z1faaaj", {
+    from_name: name,
+    from_email: email,
+    message: message
+  })
+  .then(function() {
+    document.getElementById("form-status").innerText = "✅ Message sent successfully!";
+  }, function(error) {
+    document.getElementById("form-status").innerText = "❌ Failed to send message";
+    console.log(error);
+  });
+}
+</script>
+<script>
+  (function(){
+  emailjs.init("W2a3QapSJI84s6LAz");
+})();
 
 /* ── THREAT COUNTER (sim) ───────────────────────────── */
 let tc=0;
@@ -1160,7 +1194,8 @@ function animCounters(){
   });
 }
 setTimeout(animCounters,500);
-
+</script>
+  <script>
 /* ── SCROLL OBSERVER ────────────────────────────────── */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
