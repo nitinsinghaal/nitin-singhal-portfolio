@@ -955,16 +955,15 @@ footer{background:var(--bg);border-top:1px solid var(--border)}
     <div class="contact-form-wrap">
       <div class="cf-field">
         <label class="cf-label">YOUR NAME</label>
-        <input class="cf-input" type="text" placeholder="Your Name" id="cf-name" autocomplete="off"/>
+      <input class="cf-input" type="text" name="from_name" placeholder="Your Name" id="cf-name" autocomplete="off" />
       </div>
       <div class="cf-field">
         <label class="cf-label">YOUR EMAIL</label>
-        <input class="cf-input" type="email" placeholder="you@company.com" id="cf-email" autocomplete="off"/>
+      <input class="cf-input" type="email" name="from_email" placeholder="you@company.com" id="cf-email" autocomplete="off" />
       </div>
       <div class="cf-field">
         <label class="cf-label">YOUR MESSAGE</label>
-        <textarea class="cf-input cf-textarea" placeholder="Hello Nitin, I'd like to discuss an opportunity..." id="cf-msg"></textarea>
-      </div>
+      <textarea class="cf-input cf-textarea" name="message" placeholder="Hello Nitin, I'd like to discuss an opportunity..." id="cf-msg"></textarea>      </div>
       <button class="deploy-btn" onclick="deployMsg()">
         <span id="deploy-text">DEPLOY MESSAGE</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
